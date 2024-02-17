@@ -34,6 +34,9 @@
 					<button type="submit" class="btn btn-default">Submit Button</button>
 					<button type="reset" class="btn btn-default">Reset Button</button>
 				</form>
+				
+				<!-- 임시 -->
+				<button data-oper="list" class="btn btn-info" onclick="location.href='/board/list'">List</button>
 			</div>
 			<!-- end panel-body -->
 		</div>
