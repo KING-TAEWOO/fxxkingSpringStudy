@@ -20,11 +20,13 @@
 
 			<div class="panel-body">
 				<div class="form-group">
-					<label>Bno</label> <input class="form-control" name="bno" value="${board.bno}" readonly="readonly" />
+					<label>Bno</label>
+					<input class="form-control" name="bno" value="${board.bno}" readonly="readonly" />
 				</div>
 
 				<div class="form-group">
-					<label>Title</label> <input class="form-control" name="title" value="${board.title }" readonly="readonly" />
+					<label>Title</label>
+					<input class="form-control" name="title" value="${board.title }" readonly="readonly" />
 				</div>
 
 				<div class="form-group">
@@ -33,7 +35,8 @@
 				</div>
 
 				<div class="form-group">
-					<label>Writer</label> <input class="form-control" name="writer" value="${board.writer }" readonly="readonly" />
+					<label>Writer</label>
+					<input class="form-control" name="writer" value="${board.writer }" readonly="readonly" />
 				</div>
 
 				<button data-oper="modify" class="btn btn-default" onclick="location.href='/board/modify?bno=${board.bno }'">Modify</button>
@@ -43,6 +46,8 @@
 					<input type="hidden" id="bno" name="bno" value="${board.bno }" />
 					<input type="hidden" name="pageNum" value="${cri.pageNum }" />
 					<input type="hidden" name="amount" value="${cri.amount }" />
+					<input type="hidden" name="keyword" value="${cri.keyword }" />
+					<input type="hidden" name="type" value="${cri.type }" />
 				</form>
 			</div>
 			<!-- end panel-body -->

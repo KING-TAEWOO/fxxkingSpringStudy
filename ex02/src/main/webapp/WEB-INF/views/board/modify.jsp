@@ -23,13 +23,17 @@
 
 					<input type="hidden" name="pageNum" value="${cri.pageNum }" />
 					<input type="hidden" name="amount" value="${cri.amount }" />
+					<input type="hidden" name="keyword" value="${cri.keyword }" />
+					<input type="hidden" name="type" value="${cri.type }" />
 
 					<div class="form-group">
-						<label>Bno</label> <input class="form-control" name="bno" value="${board.bno }" readonly="readonly" />
+						<label>Bno</label>
+						<input class="form-control" name="bno" value="${board.bno }" readonly="readonly" />
 					</div>
 
 					<div class="form-group">
-						<label>Title</label> <input class="form-control" name="title" value="${board.title }" />
+						<label>Title</label>
+						<input class="form-control" name="title" value="${board.title }" />
 					</div>
 
 					<div class="form-group">
@@ -38,14 +42,17 @@
 					</div>
 
 					<div class="form-group">
-						<label>Writer</label> <input class="form-control" name="writer" value="${board.writer }" readonly="readonly" />
+						<label>Writer</label>
+						<input class="form-control" name="writer" value="${board.writer }" readonly="readonly" />
 					</div>
 
 					<div class="form-group">
-						<label>RegDate</label> <input class="form-control" name="regDate" value="<fmt:formatDate pattern='yyyy/MM/dd' value='${board.regdate }'/>" readonly="readonly" />
+						<label>RegDate</label>
+						<input class="form-control" name="regDate" value="<fmt:formatDate pattern='yyyy/MM/dd' value='${board.regdate }'/>" readonly="readonly" />
 					</div>
 					<div class="form-group">
-						<label>Update Date</label> <input class="form-control" name="updateDate" value="<fmt:formatDate pattern='yyyy/MM/dd' value='${board.updateDate }'/>" readonly="readonly" />
+						<label>Update Date</label>
+						<input class="form-control" name="updateDate" value="<fmt:formatDate pattern='yyyy/MM/dd' value='${board.updateDate }'/>" readonly="readonly" />
 					</div>
 
 					<button type="submit" data-oper="modify" class="btn btn-default">Modify</button>
@@ -81,12 +88,17 @@
 			} else if (operation === 'list') {
 				// move to list
 				formObj.attr('action', '/board/list').attr('method', 'get');
+				
 				var pageNumTag = $('input[name="pageNum"]').clone();
 				var amountTag = $('input[name="amount"]').clone();
+				var keywordTag = $('input[name="keyword"]').clone();
+				var typeTag = $('input[name="type"]').clone();
 				formObj.empty();
 				
 				formObj.append(pageNumTag);
 				formObj.append(amountTag);
+				formObj.append(keywordTag);
+				formObj.append(typeTag);
 			}
 
 			formObj.submit();
